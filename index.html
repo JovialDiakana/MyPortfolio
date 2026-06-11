@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de JoviaL — Développeur web & étudiant en informatique"
+    />
+    <title>Jovial-Diakana.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Curseur personnalisé -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+      <div class="loader-inner">
+        <span class="loader-text">Portfolio for JoviaL</span>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#accueil" class="nav-logo">JvL<span>.</span></a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+          <li><a href="#apropos" class="nav-link">À propos</a></li>
+          <li><a href="#competences" class="nav-link">Compétences</a></li>
+          <li><a href="#projets" class="nav-link">Projets</a></li>
+          <li><a href="#parcours" class="nav-link">Parcours</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Changer le thème"
+          >
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="accueil">
+        <canvas id="particles"></canvas>
+        <div class="hero-content container">
+          <p class="hero-greeting reveal">Bonjour, je suis</p>
+          <h1 class="hero-title reveal">
+            <span class="gradient-text">JoviaL Diakana</span>
+          </h1>
+          <h2 class="hero-subtitle reveal">
+            <span id="typedText"></span><span class="typed-cursor">|</span>
+          </h2>
+          <p class="hero-desc reveal">
+            Étudiant en informatique passionné par le développement web et par
+            tout ce qui concerne les sciences informatiques. Je crée des
+            expériences numériques élégantes, accessibles et performantes.
+          </p>
+          <div class="hero-buttons reveal">
+            <a href="#projets" class="btn btn-primary">
+              <span>Voir mes projets</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Me contacter</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+          <div class="hero-stats reveal">
+            <div class="stat">
+              <span class="stat-number" data-target="5">0</span
+              ><span class="stat-suffix">+</span>
+              <span class="stat-label">Projets</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="3">0</span
+              ><span class="stat-suffix">+</span>
+              <span class="stat-label">Années d'apprentissage</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="100">0</span
+              ><span class="stat-suffix">%</span>
+              <span class="stat-label">Motivation</span>
+            </div>
+          </div>
+        </div>
+        <a
+          href="#apropos"
+          class="scroll-indicator"
+          aria-label="Défiler vers le bas"
+        >
+          <span></span>
+        </a>
+      </section>
+
+      <!-- À PROPOS -->
+      <section class="section about" id="apropos">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">À propos</span>
+            <h2 class="section-title">Qui suis-je ?</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-image reveal">
+              <div class="about-image-wrapper">
+                <div class="about-avatar">
+                  <span>JvL</span>
+                </div>
+                <div class="about-badge">
+                  <i class="fa-solid fa-code"></i>
+                  <span>Dev Web</span>
+                </div>
+              </div>
+            </div>
+            <div class="about-content reveal">
+              <h3>Développeur en devenir, créatif et curieux</h3>
+              <p>
+                Je suis <strong>JoviaL</strong>, étudiant à la
+                <strong>FASI (UPC)</strong> en sciences informatiques. Mon
+                parcours m'a amené à explorer le développement front-end, la
+                conception d'interfaces et la création d'applications web utiles
+                au quotidien et chaque jours j'apprend encore pour m'améliorer
+                et reussir dans ce domaine.
+              </p>
+              <p>
+                En ce moment je travail sur un Projet de Fin d'Etude (PFE) qui
+                consiste a orienter les nouveaux candidats étudiants qui veulent
+                s'inscrire a l'UPC et ce guide le permettra a suivre les étapes
+                pour valider leur inscription
+              </p>
+              <ul class="about-info">
+                <li><i class="fa-solid fa-location-dot"></i> Kinshasa, RDC</li>
+                <li><i class="fa-solid fa-graduation-cap"></i> FASI — UPC</li>
+                <li><i class="fa-solid fa-language"></i> Français, Anglais</li>
+                <li>
+                  <i class="fa-solid fa-laptop-code"></i> Disponible pour des
+                  projets
+                </li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-sm"
+                >Travaillons ensemble</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPÉTENCES -->
+      <section class="section skills" id="competences">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Compétences</span>
+            <h2 class="section-title">Ce que j'apprend</h2>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card reveal" data-delay="0">
+              <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+              <h3>HTML5</h3>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+              <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-card reveal" data-delay="100">
+              <div class="skill-icon">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <h3>CSS3</h3>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-card reveal" data-delay="200">
+              <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+              <h3>JavaScript</h3>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="55"></div>
+              </div>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-card reveal" data-delay="300">
+              <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+              <h3>Python</h3>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+              <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-card reveal" data-delay="400">
+              <div class="skill-icon">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <h3>Responsive Design</h3>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="88"></div>
+              </div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-card reveal" data-delay="500">
+              <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+              <h3>Git & GitHub</h3>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+              <span class="skill-percent">75%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETS -->
+      <section class="section projects" id="projets">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Portfolio</span>
+            <h2 class="section-title">Mes réalisations</h2>
+          </div>
+
+          <div class="project-filters reveal">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="app">Application</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <article class="project-card reveal" data-category="web app">
+              <div class="project-image" style="--project-color: #6366f1">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+              <div class="project-body">
+                <span class="project-tag">Web · App</span>
+                <h3>CompassX UPC (en cours d'éxécutio...)</h3>
+                <p>
+                  Guide d'orientation interactif pour les nouveaux étudiants de
+                  l'UPC — formulaire, navigation et FAQ.
+                </p>
+                <div class="project-tech">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Voir</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fa-brands fa-github"></i> Code</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="web">
+              <div class="project-image" style="--project-color: #ec4899">
+                <i class="fa-solid fa-truck-moving"></i>
+              </div>
+              <div class="project-body">
+                <span class="project-tag">Web</span>
+                <h3>Déménagement Kinshasa</h3>
+                <p>
+                  Site vitrine pour une entreprise de déménagement avec
+                  formulaire de devis et design moderne.
+                </p>
+                <div class="project-tech">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Voir</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fa-brands fa-github"></i> Code</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="web design">
+              <div class="project-image" style="--project-color: #14b8a6">
+                <i class="fa-solid fa-file-lines"></i>
+              </div>
+              <div class="project-body">
+                <span class="project-tag">Web · Design</span>
+                <h3>Formulaire Interactif</h3>
+                <p>
+                  Formulaire responsive avec validation JavaScript, animations
+                  et design soigné pour tablette et mobile.
+                </p>
+                <div class="project-tech">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Voir</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fa-brands fa-github"></i> Code</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="app">
+              <div class="project-image" style="--project-color: #f59e0b">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div class="project-body">
+                <span class="project-tag">Application</span>
+                <h3>Scripts Python</h3>
+                <p>
+                  Collection de scripts Python pour l'automatisation et
+                  l'apprentissage de la programmation.
+                </p>
+                <div class="project-tech">
+                  <span>Python</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Voir</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fa-brands fa-github"></i> Code</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARCOURS -->
+      <section class="section timeline-section" id="parcours">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Parcours</span>
+            <h2 class="section-title">Mon évolution</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2024 — Présent</span>
+                <h3>Études à la FASI — UPC</h3>
+                <p>
+                  Formation en sciences informatiques : algorithmique,
+                  développement web, bases de données,systeme embarqués etc...
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2024</span>
+                <h3>Projet CompassX UPC</h3>
+                <p>
+                  Création d'un guide d'orientation numérique pour faciliter
+                  l'inscription des nouveaux étudiants.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2023</span>
+                <h3>Début en développement web</h3>
+                <p>
+                  Premiers pas en HTML, CSS et JavaScript — sites statiques et
+                  formulaires interactifs.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2023</span>
+                <h3>Apprentissage Python</h3>
+                <p>
+                  Introduction à la programmation avec Python : scripts, logique
+                  et résolution de problèmes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Contact</span>
+            <h2 class="section-title">Restons en contact</h2>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-info reveal">
+              <p class="contact-desc">
+                Vous avez un projet, une opportunité ou simplement envie
+                d'échanger ? N'hésitez pas à me contacter — je réponds
+                rapidement.
+              </p>
+              <div class="contact-cards">
+                <a href="mailto:mouss@email.com" class="contact-card">
+                  <i class="fa-solid fa-envelope"></i>
+                  <div>
+                    <span>Email</span>
+                    <strong>jovialdjmx667@email.com</strong>
+                  </div>
+                </a>
+                <a href="tel:+243981223828" class="contact-card">
+                  <i class="fa-solid fa-phone"></i>
+                  <div>
+                    <span>Téléphone</span>
+                    <strong>+243 981 223 828</strong>
+                  </div>
+                </a>
+                <div class="contact-card">
+                  <i class="fa-solid fa-map-pin"></i>
+                  <div>
+                    <span>Localisation</span>
+                    <strong>Kinshasa, RDC</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="social-links">
+                <a href="#" aria-label="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+
+            <form class="contact-form reveal" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="name">Nom complet</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Votre nom"
+                  required
+                />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="votre@email.com"
+                  required
+                />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Sujet du message"
+                  required
+                />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Votre message..."
+                  required
+                ></textarea>
+                <span class="form-error"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <span>Envoyer le message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <div class="form-success" id="formSuccess">
+                <i class="fa-solid fa-circle-check"></i>
+                Message envoyé avec succès ! Je vous répondrai bientôt.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; 2026 Tous les droits réservés<strong>
+            JoviaL-Diakana Portfolio.</strong
+          >
+        </p>
+        <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
